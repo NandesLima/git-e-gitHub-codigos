@@ -19,7 +19,9 @@ Objetos são constituídos por metadados.
 ##### Blobs (bolhas)
 
 Blobs são a composição básica dos objetos.
+
 Metadados:
+
  - Tipo: blob
  - Tamanho do arquivo
  - \0
@@ -29,7 +31,9 @@ Metadados:
 ##### Trees (Árvores)
 
 São objetos que armazenam blobs e outras trees.
+
 Metadados:
+
  - Tipo: tree
  - \0
  - Aponta para blobs e trees que possuem o seu sha1.
@@ -39,7 +43,9 @@ Metadados:
 ##### Commit
 
 Junta os blobs e trees e criam um projeto. E permite a vizualização da linha do tempo de alteração.
+
 Metadados:
+
  - Tipo: commit
  - Aponta para uma tree que aponta para outras trees e blobs
  - Aponta para o commit anterior a ele
