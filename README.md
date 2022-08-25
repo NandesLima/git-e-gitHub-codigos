@@ -11,3 +11,40 @@ Secure Hash Algorith (Algorítmo de hash seguro) - Algorítmo que faz o encripta
 Comando que gera um sha1 para o arquivo:
 
 ![](https://github.com/NandesLima/git-e-gitHub-codigos/blob/master/imagens/openssl-sha1.png)
+
+#### Objetos Internos do Git (Responsáveis pelo versionamento)
+
+Objetos são constituídos por metadados.
+
+##### Blobs (bolhas)
+
+Blobs são a composição básica dos objetos.
+Metadados:
+ - Tipo: blob
+ - Tamanho do arquivo
+ - \0
+ - Conteúdo do blob
+ - sha1 próprio
+
+##### Trees (Árvores)
+
+São objetos que armazenam blobs e outras trees.
+Metadados:
+ - Tipo: tree
+ - \0
+ - Aponta para blobs e trees que possuem o seu sha1.
+ - Guarda os nomes dos arquivos.
+ - sha1 próprio
+
+##### Commit
+
+Junta os blobs e trees e criam um projeto. E permite a vizualização da linha do tempo de alteração.
+Metadados:
+ - Tipo: commit
+ - Aponta para uma tree que aponta para outras trees e blobs
+ - Aponta para o commit anterior a ele
+ - Aponta para um Autor
+ - Aponta para uma Mensagem (Que deve descrever as alterações realizadas)
+ - Possui um timestamp (Carimbo de tempo)
+ - sha1 próprio
+ 
