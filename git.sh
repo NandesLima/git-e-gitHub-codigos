@@ -5,7 +5,6 @@
 openssl sha1 nome_do_arquivo # Guarda o versionamento e cria um código sha1
 
 git init  # Inicia o repositório dentro de um diretório local
-git clone link.git # Clona um projeto do repositório remoto
 git add . # Adiciona todos os arquivos untracked ou modified para a área de staged
 git add * # Adiciona todos os arquivos untracked ou modified para a área de staged
 git add nome_do_arquivo # Adiciona um arquivo para a área de staged
@@ -21,6 +20,9 @@ git branch nome_do_branch # Cria um novo ramo, o git init cria um branch master,
 			  # Visualiza todas as branchs
 git config --global user.email 'e-mail' # Atualiza o e-mail do usuário no GIT
 git config --global user.name username_do_repositorio_remoto # Atualiza o username do usuário no GIT
+git config --list # Lista todas as configurações do Git
+git config --global --unset user.email # Apaga configuraçãos de e-mail Git
+git config --global --unset user.name # Apaga configurações de user do Git
 
 
 # Comandos para gerar as chaves SSH - passo a passo
@@ -40,4 +42,5 @@ git push # Publica as alterações, os commits, do repositório local para o rep
 git push origin master # Publicação feita pela branch master
 git pull # Atualiza o repositório local conforme o repositório remoto.
 git pull oringin master # Atualizar o repositório a partir do branch master
+git clone link.git # Clona um projeto do repositório remoto
 
