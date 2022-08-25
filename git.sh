@@ -1,5 +1,7 @@
 #!/bin/bash
 
+openssl sha1 nome_do_arquivo # Guarda o versionamento e cria um código sha1
+
 git init  # Inicia o repositório dentro de um diretório local
 git clone link.git # Clona um projeto do repositório remoto
 git add . # Adiciona todos os arquivos untracked ou modified para a área de staged
@@ -11,6 +13,7 @@ git commit -m 'Mensagem do Commit' # Cria o commit com todos os arquivos na áre
 git push # Publica as alterações, os commits, do repositório local para o repositório remoto.
 git push origin master # Publicação feita pela branch master
 git pull # Atualiza o repositório local conforme o repositório remoto.
+git pull oringin master # Atualizar o repositório a partir do branch master
 git merge # Precisa juntar alterações de uma determinada branch com a master.
 git status # Mostra as informações de status do repositório local, Untracked, Unmodified, Modified, Staged
 git log # Mostra as alterações que o projeto vem sofrendo
