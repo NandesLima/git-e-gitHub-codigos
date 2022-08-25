@@ -102,17 +102,17 @@ Ambiente de desenvolvimento é formado por toda a parte que fica na máquina.
 
 --- Diretório de trabalho --- Staging Área --- Repositório Local (Git) ---
 
-...........--------git add-------->.......................................
+                       O--------git add-------->
 
-...................................---------git commit------>.............
+                                                        O---------git commit------>
 
-...... Untracked/Modified -----> Staged ----------> Unmodified ...........
+--- Untracked/Modified ------> Staged ----------> Unmodified --------------
 
 1. Arquivos criados e/ou modificados no Diretório de trabalho vão para a área de Staging.
 2. Os arquivos na Staging Área possuem as mudificações que "esperam" para ser commitadas.
 3. No repositório local ficam apenas os commits.
 
---- Repositório Local (Git) ---- git push -----> Repositório Remoto (GitHub)
+--- Repositório Local (Git) ---- git push -----> Repositório Remoto (GitHub) ---
 
 ## Chaves ssh
 
