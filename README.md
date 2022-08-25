@@ -22,11 +22,11 @@ Blobs são a composição básica dos objetos.
 
 Metadados:
 
- - Tipo: blob
- - Tamanho do arquivo
- - \0
- - Conteúdo do blob
- - sha1 próprio
+- Tipo: blob
+- Tamanho do arquivo
+- \0
+- Conteúdo do blob
+- sha1 próprio
 
 #### Trees (Árvores)
 
@@ -34,11 +34,11 @@ São objetos que armazenam blobs e outras trees.
 
 Metadados:
 
- - Tipo: tree
- - \0
- - Aponta para blobs e trees que possuem o seu sha1.
- - Guarda os nomes dos arquivos.
- - sha1 próprio
+- Tipo: tree
+- \0
+- Aponta para blobs e trees que possuem o seu sha1.
+- Guarda os nomes dos arquivos.
+- sha1 próprio
 
 #### Commit
 
@@ -46,14 +46,13 @@ Junta os blobs e trees e criam um projeto. E permite a vizualização da linha d
 
 Metadados:
 
- - Tipo: commit
- - Aponta para uma tree que aponta para outras trees e blobs
- - Aponta para o commit anterior a ele
- - Aponta para um Autor
- - Aponta para uma Mensagem (Que deve descrever as alterações realizadas)
- - Possui um timestamp (Carimbo de tempo)
- - sha1 próprio
-
+- Tipo: commit
+- Aponta para uma tree que aponta para outras trees e blobs
+- Aponta para o commit anterior a ele
+- Aponta para um Autor
+- Aponta para uma Mensagem (Que deve descrever as alterações realizadas)
+- Possui um timestamp (Carimbo de tempo)
+- sha1 próprio
 
 ## Status dos arquivos no Git
 
@@ -77,27 +76,25 @@ Arquivos que sofreram alguma modificação.
 
 Estado que os arquivo Modified e Untracked ficam, esperando ser comitados. 
 
-
 ## Ciclo de vida dos arquivos no git
 
---- Untracked --- Unmodified --- Modified --- Staged ---
+--- Untracked --- Unmodifie --- Modified --- Staged ---
 
-.......-----------Adiciona Arquivo------------>.........
+           O------------ Adiciona Arquivo ------------->
 
-.....................-Editar Arquivo->..................
+                                O-Editar Arquivo->
 
-..................................----"Staged"--->......
+                                                        O---"Staged"--->   
 
-.......<-Remover Arquivo--..............................
+       <-Remover Arquivo-O
 
-......................<----------Commit-----------------
+                                <----------Commit---------------O
 
 1. Arquivos que estão como Untracked são adicionados ao status de Staged, quando se utiliza o comando git add.
 2. Arquivos Unmodified quando sofrem qualquer alteração ficam com o Status de Modified.
 3. Arquivos Modified são adicionados ao status Staged, quando utiliza-se o comando git add.
 4. Arquivos Unmodified quando removidos, tornam-se Untracked.
 5. Arquivos na camada de Staged, aguardam ser comitados, com o comando git commit eles são comitados e se tornam Unmodified.
-
 
 ## Ambiente de Desenvolvimento
 
@@ -117,7 +114,6 @@ Ambiente de desenvolvimento é formado por toda a parte que fica na máquina.
 
 --- Repositório Local (Git) ---- git push -----> Repositório Remoto (GitHub)
 
-
 ## Chaves ssh
 
 ### SSH
@@ -126,6 +122,6 @@ Conexão segura entre duas máquinas com uma chave pública e chave privada.
 
 Para gerar as chaves no terminal entre o acesso remoto e o local:
 
- - ssh-keygen -t ed25519 -C "e-mail"
- - eval $(ssh-agent -s)
- - ssh-add arquivo-do-id
+- ssh-keygen -t ed25519 -C "e-mail"
+- eval $(ssh-agent -s)
+- ssh-add arquivo-do-id
