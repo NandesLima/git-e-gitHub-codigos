@@ -53,7 +53,71 @@ Metadados:
  - Aponta para uma Mensagem (Que deve descrever as alterações realizadas)
  - Possui um timestamp (Carimbo de tempo)
  - sha1 próprio
- 
+
+
+## Status dos arquivos no Git
+
+### Untracked
+
+Arquivo que o git ainda não tem ciencia.
+
+### Tracked
+
+Arquivos que o git tem ciencia da sua existência. Possuem três estados.
+
+#### Unmodified
+
+Arquivos que não sofreram modificação.
+
+#### Modified
+
+Arquivos que sofreram alguma modificação. 
+
+#### Staged
+
+Estado que os arquivo Modified e Untracked ficam, esperando ser comitados. 
+
+
+## Ciclo de vida dos arquivos no git
+
+--- Untracked --- Unmodified --- Modified --- Staged ---
+
+.......-----------Adiciona Arquivo------------>.........
+
+.....................-Editar Arquivo->..................
+
+..................................----"Staged"--->......
+
+.......<-Remover Arquivo--..............................
+
+......................<----------Commit-----------------
+
+1. Arquivos que estão como Untracked são adicionados ao status de Staged, quando se utiliza o comando git add.
+2. Arquivos Unmodified quando sofrem qualquer alteração ficam com o Status de Modified.
+3. Arquivos Modified são adicionados ao status Staged, quando utiliza-se o comando git add.
+4. Arquivos Unmodified quando removidos, tornam-se Untracked.
+5. Arquivos na camada de Staged, aguardam ser comitados, com o comando git commit eles são comitados e se tornam Unmodified.
+
+
+## Ambiente de Desenvolvimento
+
+Ambiente de desenvolvimento é formado por toda a parte que fica na máquina.
+
+--- Diretório de trabalho --- Staging Área --- Repositório Local (Git) ---
+
+...........--------git add-------->.......................................
+
+...................................---------git commit------>.............
+
+...... Untracked/Modified -----> Staged ----------> Unmodified ...........
+
+1. Arquivos criados e/ou modificados no Diretório de trabalho vão para a área de Staging.
+2. Os arquivos na Staging Área possuem as mudificações que "esperam" para ser commitadas.
+3. No repositório local ficam apenas os commits.
+
+--- Repositório Local (Git) ---- git push -----> Repositório Remoto (GitHub)
+
+
 ## Chaves ssh
 
 ### SSH
