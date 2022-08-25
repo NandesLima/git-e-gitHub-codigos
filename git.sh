@@ -9,6 +9,7 @@ git commit -m 'Mensagem do Commit' # Cria o commit com todos os arquivos na áre
 				   # Um commit deixa as alterações rastreáveis.
 				   # O -m pede um comentário sobre as mudanças do commit.
 git push # Publica as alterações, os commits, do repositório local para o repositório remoto.
+git push origin master # Publicação feita pela branch master
 git pull # Atualiza o repositório local conforme o repositório remoto.
 git merge # Precisa juntar alterações de uma determinada branch com a master.
 git status # Mostra as informações de status do repositório local, Untracked, Unmodified, Modified, Staged
