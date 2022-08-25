@@ -15,5 +15,6 @@ git status # Mostra as informações de status do repositório local, Untracked,
 git log # Mostra as alterações que o projeto vem sofrendo
 git branch nome_do_branch # Cria um novo ramo, o git init cria um branch master, o git branch cria ramificações.
 			  # Os branchs servem para partes diferentes dentro do projeto.
+			  # Visualiza todas as branchs
 
 # Documentação: https://git-scm.com/docs
