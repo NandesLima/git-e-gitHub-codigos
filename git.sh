@@ -13,8 +13,11 @@ git pull # Atualiza o repositório local conforme o repositório remoto.
 git merge # Precisa juntar alterações de uma determinada branch com a master.
 git status # Mostra as informações de status do repositório local, Untracked, Unmodified, Modified, Staged
 git log # Mostra as alterações que o projeto vem sofrendo
+	# Mostra o hash dos commits, mostra a branch, o autor, data e a mensagem do commit.
 git branch nome_do_branch # Cria um novo ramo, o git init cria um branch master, o git branch cria ramificações.
 			  # Os branchs servem para partes diferentes dentro do projeto.
 			  # Visualiza todas as branchs
-
+git remote add origin link_do_repositório_remoto # Cria uma conexão entre o repositório local e o remoto
+git remote - v # Mostra as conexões remotas que o repositório local tem
+git remote --verbose # Mostra as conexões remotas que o repositório local tem
 # Documentação: https://git-scm.com/docs
