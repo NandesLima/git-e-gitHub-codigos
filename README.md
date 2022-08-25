@@ -10,6 +10,4 @@ Secure Hash Algorith (Algorítmo de hash seguro) - Algorítmo que faz o encripta
 
 Comando que gera um sha1 para o arquivo:
 
-![](D:\Estudo\DIO\comandos-git\imagens\openssl-sha1.png)
-
-
+![](https://github.com/NandesLima/git-e-gitHub-codigos/blob/master/imagens/openssl-sha1.png)
