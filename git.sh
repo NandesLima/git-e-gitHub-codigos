@@ -19,6 +19,8 @@ git log # Mostra as alterações que o projeto vem sofrendo
 git branch nome_do_branch # Cria um novo ramo, o git init cria um branch master, o git branch cria ramificações.
 			  # Os branchs servem para partes diferentes dentro do projeto.
 			  # Visualiza todas as branchs
+git config --global user.email 'e-mail' # Atualiza o e-mail do usuário no GIT
+git config --global user.name username_do_repositorio_remoto # Atualiza o username do usuário no GIT
 
 
 # Comandos para gerar as chaves SSH - passo a passo
