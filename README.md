@@ -78,13 +78,13 @@ Estado que os arquivo Modified e Untracked ficam, esperando ser comitados.
 
 ## Ciclo de vida dos arquivos no git
 
-| Untracked       |                          | Unmodifie        |                   | Modified      |              | Staged       |
-| --------------- | ------------------------ | ---------------- | ----------------- | ------------- | ------------ | ------------ |
-| o-------------- | ------------------------ | ---------------- | Adicionar arquivo | ------------- | ------------ | -----------> |
-|                 |                          | o--------------  | Editar arquivo    | ------------> |              |              |
-|                 |                          |                  |                   | o-----------  | "Staged"     | -----------> |
-| <-------------- | Remover Arquivo          | --------------o  |                   |               |              |              |
-|                 |                          | <--------------  | Commit            | ------------- | ------------ | -----------o |
+| Untracked  |                    | Unmodifie    |                   | Modified  |          | Staged   |
+| ---------- | ------------------ | ------------ | ----------------- | --------- | -------- | -------- |
+| o--------- | ------------------ | ------------ | Adicionar arquivo | --------- | -------- | -------> |
+|            |                    | o----------  | Editar arquivo    | --------> |          |          |
+|            |                    |              |                   | o-------  | "Staged" | -------> |
+| <--------- | Remover Arquivo    | ----------o  |                   |           |          |          |
+|            |                    | <----------  | Commit            | --------- | -------  | ------o  |
 
 1. Arquivos que estão como Untracked são adicionados ao status de Staged, quando se utiliza o comando git add.
 2. Arquivos Unmodified quando sofrem qualquer alteração ficam com o Status de Modified.
@@ -96,11 +96,11 @@ Estado que os arquivo Modified e Untracked ficam, esperando ser comitados.
 
 Ambiente de desenvolvimento é formado por toda a parte que fica na máquina.
 
-| Diretório de trabalho            |              | Staging Área         |                 | Repositório Local (Git)           |
-| -------------------------------- | ------------ | -------------------- | --------------- | --------------------------------- |
-| o------------------------------- | git add      | -------------------> |                 |                                   |
-|                                  |              | o------------------  | git commit      | --------------------------------> |
-| Untracked/Modified               | -----------> | Staged               | --------------> | Unmodified                        |
+| Diretório de trabalho     |          | Staging Área   |            | Repositório Local (Git)                              |
+| ------------------------- | -------- | -------------- | ---------- | ---------------------------------------------------- |
+| o------------------------ | git add  | -------------> |            |                                                      |
+|                           |          | o-----------   | git commit | -----------------------> |
+| Untracked/Modified        | -------> | Staged         | ---------> | Unmodified                                           |
 
 1. Arquivos criados e/ou modificados no Diretório de trabalho vão para a área de Staging.
 2. Os arquivos na Staging Área possuem as mudificações que "esperam" para ser commitadas.
