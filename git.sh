@@ -13,8 +13,13 @@ git commit -m 'Mensagem do Commit' # Cria o commit com todos os arquivos na áre
 				   # O -m pede um comentário sobre as mudanças do commit.
 git merge # Precisa juntar alterações de uma determinada branch com a master.
 git status # Mostra as informações de status do repositório local, Untracked, Unmodified, Modified, Staged
+git show hash_de_uma_versao # Mostra o que aconteceu dentro de um commit.
 git log # Mostra as alterações que o projeto vem sofrendo
 	# Mostra o hash dos commits, mostra a branch, o autor, data e a mensagem do commit.
+git log --author = "nome" # Filtra por comites que o nome do Autor contanha o valor informado.
+git log --graph # Mostra de forma gráfica o que está acontecendo com os branchs e as versões.
+git shortlog # Mostra em ordem alfabética, os autore, quantidade de commits e quais commits fizeram.
+git shortlog -sn # Montra a quantidade de commits e o autor.
 git branch nome_do_branch # Cria um novo ramo, o git init cria um branch master, o git branch cria ramificações.
 			  # Os branchs servem para partes diferentes dentro do projeto.
 			  # Visualiza todas as branchs
