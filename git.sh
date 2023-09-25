@@ -11,11 +11,18 @@ git add nome_do_arquivo # Adiciona um arquivo para a área de staged
 git commit -m 'Mensagem do Commit' # Cria o commit com todos os arquivos na área de Staged deixando eles  com o status Unmodified
 				   # Um commit deixa as alterações rastreáveis.
 				   # O -m pede um comentário sobre as mudanças do commit.
+git commit -am "Mensagem do commit" # Passa de unmodified diretamente para commitado.
+
 git merge # Precisa juntar alterações de uma determinada branch com a master.
 git status # Mostra as informações de status do repositório local, Untracked, Unmodified, Modified, Staged
 git show hash_de_uma_versao # Mostra o que aconteceu dentro de um commit.
-git diff # Mostra as alterações que serão colocadas no commit.
+git diff # Mostra as alterações que serão colocadas no commit, quando o arquivo etá como unmodified.
 git diff --name-only # Retorna o nome dos arquivos modificados.
+git checkout nome_do_arquivo # Reseta um arquivo unmodified para como ele estava antes de ser editao.
+git reset HEAD nome_do_arquivo # Reseta um arquivo que está na posição de staged para unmodified.
+git reser --soft hash_da_versao_anterior # Exclui o commit criado e deixa o arquivo em staged pronto para ser commitado.
+git reset --mixed # Exclui o commit criado e volta os arquivos para modified.
+git resrt --hard # Exclui o commit criado e tudo que foi feito, voltando os arquivos para a versão unmodified anterior.
 git log # Mostra as alterações que o projeto vem sofrendo
 	# Mostra o hash dos commits, mostra a branch, o autor, data e a mensagem do commit.
 git log --author = "nome" # Filtra por comites que o nome do Autor contanha o valor informado.
@@ -25,6 +32,7 @@ git shortlog -sn # Montra a quantidade de commits e o autor.
 git branch nome_do_branch # Cria um novo ramo, o git init cria um branch master, o git branch cria ramificações.
 			  # Os branchs servem para partes diferentes dentro do projeto.
 			  # Visualiza todas as branchs
+     
 git config --global user.email 'e-mail' # Atualiza o e-mail do usuário no GIT
 git config --global user.name username_do_repositorio_remoto # Atualiza o username do usuário no GIT
 git config --global core.editor referencia_do_editor # Atualiza o editor do Git (Para o Sublime usa-se o sub, por padrão ele usa o vim)
