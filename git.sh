@@ -20,6 +20,7 @@ git branch nome_do_branch # Cria um novo ramo, o git init cria um branch master,
 			  # Visualiza todas as branchs
 git config --global user.email 'e-mail' # Atualiza o e-mail do usuário no GIT
 git config --global user.name username_do_repositorio_remoto # Atualiza o username do usuário no GIT
+git config --global core.editor referencia_do_editor # Atualiza o editor do Git (Para o Sublime usa-se o sub, por padrão ele usa o vim)
 git config --list # Lista todas as configurações do Git
 git config --global --unset user.email # Apaga configuraçãos de e-mail Git
 git config --global --unset user.name # Apaga configurações de user do Git
