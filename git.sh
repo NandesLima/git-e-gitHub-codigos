@@ -14,6 +14,8 @@ git commit -m 'Mensagem do Commit' # Cria o commit com todos os arquivos na áre
 git merge # Precisa juntar alterações de uma determinada branch com a master.
 git status # Mostra as informações de status do repositório local, Untracked, Unmodified, Modified, Staged
 git show hash_de_uma_versao # Mostra o que aconteceu dentro de um commit.
+git diff # Mostra as alterações que serão colocadas no commit.
+git diff --name-only # Retorna o nome dos arquivos modificados.
 git log # Mostra as alterações que o projeto vem sofrendo
 	# Mostra o hash dos commits, mostra a branch, o autor, data e a mensagem do commit.
 git log --author = "nome" # Filtra por comites que o nome do Autor contanha o valor informado.
